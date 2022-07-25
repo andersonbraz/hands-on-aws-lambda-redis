@@ -9,6 +9,35 @@
 
 ## Solução
 
+### Step 1
+
+```shell
+mkdir my-sample-lambda
+```
+### Step 2
+
+```shell
+touch my-sample-lambda/app.py
+```
+### Step 3
+
+```shell
+```
+
+```shell
+```
+
+```shell
+```
+
+```shell
+```
+
+```shell
+```
+
+```shell
+```
 
 ### Criar Função Lambda
 
