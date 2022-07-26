@@ -21,20 +21,40 @@ touch my-sample-lambda/app.py
 ```
 ### Step 3
 
-```shell
+```python
+import boto3
+s3 = boto3.resource('s3')
+my_bucket = s3.Bucket('braz-bucket-storage')
+
+for my_bucket_object in my_bucket.objects.all():
+    print(my_bucket_object)
 ```
 
-```shell
-```
+### Step 4
 
 ```shell
+pip install --target ./my-sample-lambda/package boto3
 ```
 
-```shell
-```
+### Step 5
 
 ```shell
+cd ./my-sample-lambda/package && zip -r ../my-sample-package.zip . && cd ..
 ```
+
+### Step 6
+
+```shell
+zip -g my-sample-package.zip app.py
+```
+
+### Step 7
+
+```shell
+aws lambda update-function-code --function-name MySample_001 --zip-file fileb://my-sample-package.zip
+```
+
+### Step 8
 
 ```shell
 ```
